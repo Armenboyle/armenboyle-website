@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armenia | ArmenBoyle Travel Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Password Protection Overlay -->
+    <div id="password-overlay" class="password-overlay">
+        <div class="password-container">
+            <div class="password-logo"><span class="letter-a">A</span><span class="letter-b">B</span></div>
+            <h2>ArmenBoyle Travel Collection</h2>
+            <p>Enter password to access</p>
+            <form id="password-form">
+                <input type="password" id="password-input" placeholder="Password" autocomplete="off">
+                <button type="submit">Enter</button>
+            </form>
+            <p class="password-hint">Private collection</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-mark logo-mark-ornate"><span class="letter-a">A</span><span class="letter-b">B</span></span>
+                <span class="logo-text">ArmenBoyle</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#hotels">Hotels</a></li>
+                <li><a href="#dining">Dining</a></li>
+                <li><a href="#wineries">Wineries</a></li>
+                <li><a href="#cultural">Cultural Sites</a></li>
+                <li><a href="#museums">Galleries & Markets</a></li>
+                <li><a href="#legends">Legends</a></li>
+                                <li><a href="#map">Map</a></li>
+                <li><a href="#itineraries">Itineraries</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-media">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Khor_Virap_Monastery%2C_aerial_view.jpg/1280px-Khor_Virap_Monastery%2C_aerial_view.jpg" alt="Khor Virap Monastery with Mount Ararat" class="hero-image">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">The ArmenBoyle Collection</p>
+            <h1>Armenia</h1>
+            <p class="hero-tagline">Ancient lands, timeless beauty</p>
+            <div class="hero-scroll">
+                <span>Explore</span>
+                <div class="scroll-indicator"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro-content">
+                <span class="section-label">Welcome</span>
+                <h2>A Curated Journey Through Armenia</h2>
+                <p>Armenia is one of the world's oldest civilizations, a land where ancient monasteries cling to dramatic cliffs, where wine has been made for over 6,000 years, and where hospitality is elevated to an art form. This collection represents the finest experiences the country has to offer—from luxury retreats to hidden culinary gems, from world-class wineries to sacred sites that have witnessed millennia of human history.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-about">
+        <div class="container">
+            <div class="about-header">
+                <div class="about-image-small">
+                    <img src="https://www.fipp.com/wp-content/uploads/2021/12/Yulia-Boyle-scaled-1.jpg" alt="Yulia Petrossian Boyle" loading="lazy">
+                </div>
+                <div class="about-intro">
+                    <span class="section-label">Your Host</span>
+                    <h2>Yulia Petrossian Boyle</h2>
+                    <p class="about-tagline">Native of Armenia · Global Media Executive · Your Guide</p>
+                </div>
+            </div>
+
+            <!-- Dropdown Sections -->
+            <div class="about-dropdowns">
+                <!-- Why This Site -->
+                <details class="about-dropdown" open>
+                    <summary class="dropdown-title">Why This Site</summary>
+                    <div class="dropdown-content">
+                        <p>Armenia is not just where I was born—it's the place that shaped my soul.</p>
+                        <p>After years of friends asking for recommendations before their trips, I created this collection as a gift. These are the places I take my own guests: the restaurants where the food tells stories, the hotels that understand true hospitality, the monasteries where time seems to pause, and the wineries continuing a 6,000-year tradition.</p>
+                        <p>This isn't a comprehensive travel guide—it's a personal invitation to experience Armenia the way it deserves to be experienced: slowly, deeply, and with the warmth that defines our culture.</p>
+                        <p class="signature-inline">— Yulia</p>
+                    </div>
+                </details>
+
+                <!-- About Armenia -->
+                <details class="about-dropdown">
+                    <summary class="dropdown-title">About Armenia</summary>
+                    <div class="dropdown-content">
+                        <p class="about-lead-text">There is a land where history is measured not in centuries but in millennia. Where monasteries cling to cliffs as they have for 1,700 years. Where the world's oldest winery sleeps in a cave, and the world's oldest leather shoe was preserved in the same cool darkness. This is Armenia.</p>
+
+                        <p>Tucked between the peaks of the Caucasus and the high plateau that bears its name, Armenia is one of civilization's oldest continuous cultures. The Armenian alphabet, created in 405 AD, still graces the pages of ancient manuscripts kept in Yerevan's Matenadaran—one of the world's great repositories of medieval knowledge. The people here have been making wine for over 6,000 years, carving churches from living rock, and welcoming strangers as honored guests since before Rome was founded.</p>
+
+                        <p>In 301 AD, Armenia became the first nation on earth to adopt Christianity as its state religion. Today, more than 4,000 churches and monasteries dot a landscape of impossible beauty—snow-capped Mount Ararat rising on the horizon, Lake Sevan shimmering at nearly 2,000 meters altitude, and gorges of red rock sheltering medieval treasures. The cuisine here is ancient too: pomegranates, apricots (which likely originated here), fresh herbs, grilled meats, and lavash bread baked in clay ovens as it has been for centuries.</p>
+
+                        <p>But what visitors remember most is not the monuments or the food—it's the people. Armenians possess a warmth that goes beyond hospitality. Invite a stranger to dinner and watch as the table fills with dishes, the glasses with wine and toasts, the room with laughter. This generosity of spirit, forged through millennia of history, is Armenia's greatest treasure.</p>
+                    </div>
+                </details>
+
+                <!-- A Brief History -->
+                <details class="about-dropdown">
+                    <summary class="dropdown-title">A Brief History</summary>
+                    <div class="dropdown-content">
+                        <p>Armenia's story begins in the mists of antiquity. The Kingdom of Urartu flourished here around 860 BC, leaving behind fortress walls and bronze artifacts. When that civilization faded, the Armenian people emerged, their identity crystallizing around a unique language, alphabet, and eventually, faith.</p>
+
+                        <p>The adoption of Christianity in 301 AD—a full decade before the Roman Empire—made Armenia the world's first Christian nation. The centuries that followed saw the creation of the Armenian alphabet by the monk Mesrop Mashtots, an explosion of literature and learning, and the construction of the monasteries that still define the landscape. Despite centuries of foreign rule—by Persians, Arabs, Mongols, Ottomans, and Soviets—Armenian culture not only survived but flourished in diaspora communities from Jerusalem to Venice to Los Angeles.</p>
+
+                        <p>Modern Armenia, independent since 1991, is a nation of three million with a diaspora of ten million more scattered across the globe. Today, Yerevan buzzes with cafes, galleries, and a food scene that's capturing international attention—yet drive thirty minutes in any direction and you're in a landscape unchanged for centuries, where shepherds tend flocks beneath medieval towers and monasteries echo with ancient hymns.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Itinerary Builder Section -->
+    <section id="itineraries" class="section section-itinerary-builder">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Plan Your Trip</span>
+                <h2>Build Your Itinerary</h2>
+                <p class="section-intro">Drag recommendations to your daily plan. Your itinerary saves automatically.</p>
+            </div>
+
+            <div class="builder-controls">
+                <div class="day-controls">
+                    <button class="builder-btn" id="add-day-btn">+ Add Day</button>
+                    <button class="builder-btn" id="remove-day-btn">− Remove Day</button>
+                </div>
+                <button class="builder-btn builder-btn-clear" id="clear-itinerary-btn">Clear All</button>
+            </div>
+
+            <div class="itinerary-builder">
+                <!-- Recommendations Panel -->
+                <div class="recommendations-panel">
+                    <h3 class="panel-title">My Recommendations</h3>
+                    <p class="panel-hint">Drag items to your days →</p>
+
+                    <!-- Hotels -->
+                    <details class="rec-category" open>
+                        <summary class="category-title"><span class="cat-icon">🏨</span> Hotels</summary>
+                        <div class="rec-items">
+                            <div class="rec-item" draggable="true" data-category="hotel">
+                                <span class="item-name">The Alexander</span>
+                                <span class="item-location">Yerevan</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="hotel">
+                                <span class="item-name">Grand Hotel Yerevan</span>
+                                <span class="item-location">Yerevan</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="hotel">
+                                <span class="item-name">Tufenkian Avan Marak</span>
+                                <span class="item-location">Lake Sevan</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="hotel">
+                                <span class="item-name">Tufenkian Old Dilijan</span>
+                                <span class="item-location">Dilijan</span>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Restaurants -->
+                    <details class="rec-category">
+                        <summary class="category-title"><span class="cat-icon">🍽️</span> Restaurants</summary>
+                        <div class="rec-items">
+                            <div class="rec-item" draggable="true" data-category="restaurant">
+                                <span class="item-name">Mayrig</span>
+                                <span class="item-location">Yerevan</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="restaurant">
+                                <span class="item-name">Lavash</span>
+                                <span class="item-location">Yerevan</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="restaurant">
+                                <span class="item-name">Sherep</span>
+                                <span class="item-location">Yerevan</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="restaurant">
+                                <span class="item-name">In Vino</span>
+                                <span class="item-location">Yerevan</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="restaurant">
+                                <span class="item-name">Tsaghkunk</span>
+                                <span class="item-location">Ashtarak</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="restaurant">
+                                <span class="item-name">Yasaman</span>
+                                <span class="item-location">Lake Sevan</span>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Wineries -->
+                    <details class="rec-category">
+                        <summary class="category-title"><span class="cat-icon">🍷</span> Wineries</summary>
+                        <div class="rec-items">
+                            <div class="rec-item" draggable="true" data-category="winery">
+                                <span class="item-name">Trinity Canyon</span>
+                                <span class="item-location">Areni</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="winery">
+                                <span class="item-name">Zorah Wines</span>
+                                <span class="item-location">Yeghegnadzor</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="winery">
+                                <span class="item-name">Old Bridge Winery</span>
+                                <span class="item-location">Areni</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="winery">
+                                <span class="item-name">Armenia Wine</span>
+                                <span class="item-location">Sasunik</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="winery">
+                                <span class="item-name">Voskevaz Winery</span>
+                                <span class="item-location">Aragatsotn</span>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Cultural Sites -->
+                    <details class="rec-category">
+                        <summary class="category-title"><span class="cat-icon">⛪</span> Cultural Sites</summary>
+                        <div class="rec-items">
+                            <div class="rec-item" draggable="true" data-category="cultural">
+                                <span class="item-name">Khor Virap</span>
+                                <span class="item-location">40 min from Yerevan</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="cultural">
+                                <span class="item-name">Geghard Monastery</span>
+                                <span class="item-location">UNESCO · 40 min</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="cultural">
+                                <span class="item-name">Temple of Garni</span>
+                                <span class="item-location">30 min from Yerevan</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="cultural">
+                                <span class="item-name">Noravank Monastery</span>
+                                <span class="item-location">2 hrs from Yerevan</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="cultural">
+                                <span class="item-name">Tatev Monastery</span>
+                                <span class="item-location">4 hrs · Tramway</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="cultural">
+                                <span class="item-name">Sevanavank</span>
+                                <span class="item-location">Lake Sevan</span>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Museums & Markets -->
+                    <details class="rec-category">
+                        <summary class="category-title"><span class="cat-icon">🏛️</span> Museums & Markets</summary>
+                        <div class="rec-items">
+                            <div class="rec-item" draggable="true" data-category="museum">
+                                <span class="item-name">Cafesjian Center</span>
+                                <span class="item-location">The Cascade</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="museum">
+                                <span class="item-name">Matenadaran</span>
+                                <span class="item-location">Manuscripts</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="museum">
+                                <span class="item-name">ARARAT Museum</span>
+                                <span class="item-location">Brandy Tastings</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="museum">
+                                <span class="item-name">Vernissage Market</span>
+                                <span class="item-location">Crafts · Weekends</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="museum">
+                                <span class="item-name">GUM Market</span>
+                                <span class="item-location">Food Market</span>
+                            </div>
+                            <div class="rec-item" draggable="true" data-category="museum">
+                                <span class="item-name">Areni-1 Cave</span>
+                                <span class="item-location">Oldest Winery</span>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Days Panel -->
+                <div class="days-panel" id="days-panel">
+                    <div class="day-column" data-day="1">
+                        <div class="day-header">
+                            <h4>Day 1</h4>
+                        </div>
+                        <div class="day-dropzone" data-day="1">
+                            <p class="dropzone-hint">Drop items here</p>
+                        </div>
+                    </div>
+                    <div class="day-column" data-day="2">
+                        <div class="day-header">
+                            <h4>Day 2</h4>
+                        </div>
+                        <div class="day-dropzone" data-day="2">
+                            <p class="dropzone-hint">Drop items here</p>
+                        </div>
+                    </div>
+                    <div class="day-column" data-day="3">
+                        <div class="day-header">
+                            <h4>Day 3</h4>
+                        </div>
+                        <div class="day-dropzone" data-day="3">
+                            <p class="dropzone-hint">Drop items here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotels Section - Organized by Region -->
+    <section id="hotels" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Where to Stay</span>
+                <h2>Hotels & Retreats</h2>
+                <p class="section-intro">From Yerevan's sophisticated luxury properties to countryside retreats nestled in ancient landscapes</p>
+            </div>
+
+            <!-- Yerevan Hotels -->
+            <div class="region-group">
+                <h3 class="region-title">Yerevan</h3>
+                <div class="cards-grid">
+                    <!-- The Alexander -->
+                    <article class="card card-featured">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Alexander Hotel Yerevan" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Yerevan</span>
+                            <h3>The Alexander</h3>
+                            <p class="card-subtitle">A Luxury Collection Hotel</p>
+                            <p class="card-description">Yerevan's premier luxury address, where contemporary elegance meets Armenian heritage. Impeccable service, world-class dining, and views of Mount Ararat define this exceptional property.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> 3/4 Abovyan Street, Yerevan 0001</p>
+                                <p><strong>Phone:</strong> <a href="tel:+37411206000">+374 11 206-000</a></p>
+                                <p><strong>Website:</strong> <a href="https://www.marriott.com/en-us/hotels/evnlc-the-alexander-a-luxury-collection-hotel-yerevan/" target="_blank">marriott.com</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Luxury</span>
+                                <span class="card-tag">City Center</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Grand Hotel Yerevan -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Grand Hotel Yerevan" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Yerevan</span>
+                            <h3>Grand Hotel Yerevan</h3>
+                            <p class="card-subtitle">Historic Elegance</p>
+                            <p class="card-description">A landmark of Yerevan hospitality, offering classic luxury in a prestigious central location with refined service and timeless sophistication.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> 14 Abovyan Street, Yerevan</p>
+                                <p><strong>Phone:</strong> <a href="tel:+37410599900">+374 10 599-900</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Classic</span>
+                                <span class="card-tag">Heritage</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Lake Sevan Hotels -->
+            <div class="region-group">
+                <h3 class="region-title">Lake Sevan</h3>
+                <div class="cards-grid">
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Tufenkian Lake Sevan" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Lake Sevan</span>
+                            <h3>Tufenkian Avan Marak Tsapatagh</h3>
+                            <p class="card-subtitle">Lakeside Serenity</p>
+                            <p class="card-description">Perched above the shores of Lake Sevan, the "jewel of Armenia," this lakeside retreat offers spectacular views of the high-altitude lake and surrounding mountains.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> Tsapatagh Village, Lake Sevan</p>
+                                <p><strong>Phone:</strong> <a href="tel:+37410599930">+374 10 599-930</a></p>
+                                <p><strong>Website:</strong> <a href="https://tufenkianheritage.com/" target="_blank">tufenkianheritage.com</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Lakeside</span>
+                                <span class="card-tag">Scenic</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Dilijan Hotels -->
+            <div class="region-group">
+                <h3 class="region-title">Dilijan</h3>
+                <div class="cards-grid">
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Tufenkian Old Dilijan Complex" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Dilijan</span>
+                            <h3>Tufenkian Old Dilijan Complex</h3>
+                            <p class="card-subtitle">Mountain Retreat</p>
+                            <p class="card-description">Nestled in the forested hills of Dilijan, often called "Armenia's Switzerland," this restored 19th-century complex offers an authentic retreat surrounded by pristine nature and traditional architecture.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> 1 Sharambeyan Street, Dilijan</p>
+                                <p><strong>Phone:</strong> <a href="tel:+37410599920">+374 10 599-920</a></p>
+                                <p><strong>Website:</strong> <a href="https://old-dilijan.tufenkianheritage.com/" target="_blank">tufenkianheritage.com</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Nature</span>
+                                <span class="card-tag">Heritage</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurants Section - with Vogue Feature -->
+    <section id="dining" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Culinary Experiences</span>
+                <h2>Restaurants & Dining</h2>
+                <p class="section-intro">From refined Armenian cuisine to farm-to-table experiences, discover the depth of this ancient culinary tradition</p>
+            </div>
+
+            <!-- Press Feature -->
+            <div class="press-feature">
+                <div class="press-badge">As Featured In</div>
+                <blockquote>
+                    "Female chefs are blazing a new trail in Armenian cuisine... Armenia and its food culture are on the rise among gourmets worldwide."
+                    <cite>— <a href="https://www.vogue.com" target="_blank">Vogue</a>, August 2024</cite>
+                </blockquote>
+            </div>
+
+            <!-- Yerevan Restaurants -->
+            <div class="region-group">
+                <h3 class="region-title">Yerevan</h3>
+                <div class="cards-grid">
+                    <!-- Mayrig -->
+                    <article class="card card-featured">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Mayrig Restaurant Yerevan" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Yerevan</span>
+                            <h3>Mayrig</h3>
+                            <p class="card-subtitle">Mediterranean-Armenian Refined</p>
+                            <p class="card-description">Named for the Armenian word for "mother," Mayrig elevates Western Armenian home-style cooking to an art form. Recipes from founder Alin Kamakyan's grandmother who migrated from Musaler to Lebanon.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> 4/6 Amiryan Street, Yerevan</p>
+                                <p><strong>Phone:</strong> <a href="tel:+37441760760">+374 41 760-760</a></p>
+                                <p><strong>Website:</strong> <a href="http://www.mayrig.am" target="_blank">mayrig.am</a></p>
+                                <p><strong>Hours:</strong> 9:30am - Midnight</p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Fine Dining</span>
+                                <span class="card-tag">Traditional</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Lavash -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Lavash Restaurant" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Yerevan</span>
+                            <h3>Lavash</h3>
+                            <p class="card-subtitle">Elevated Armenian Classics</p>
+                            <p class="card-description">A celebration of Armenia's culinary heritage, featuring tonir-baked bread and elevated interpretations of classic dishes. Watch master bakers craft UNESCO-recognized lavash in traditional clay ovens.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> 21 Tumanyan Street, Yerevan</p>
+                                <p><strong>Phone:</strong> <a href="tel:+37411207020">+374 11 207-020</a></p>
+                                <p><strong>Website:</strong> <a href="https://lavash.am" target="_blank">lavash.am</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Traditional</span>
+                                <span class="card-tag">Tonir</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- In Vino -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80" alt="In Vino Wine Bar" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Yerevan</span>
+                            <h3>In Vino</h3>
+                            <p class="card-subtitle">Wine Bar Excellence</p>
+                            <p class="card-description">An intimate wine bar showcasing Armenia's remarkable wine renaissance. Co-owned by Mariam Saghatelyan, featured in Vogue's article on Armenian female culinary pioneers.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> 6 Saryan Street, Yerevan</p>
+                                <p><strong>Phone:</strong> <a href="tel:+37455500806">+374 55 500-806</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Wine Bar</span>
+                                <span class="card-tag">Vogue Featured</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sherep -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800&q=80" alt="Sherep Restaurant" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Yerevan</span>
+                            <h3>Sherep</h3>
+                            <p class="card-subtitle">High-Energy Open Kitchen</p>
+                            <p class="card-description">Experience the theater of Armenian cooking with an open kitchen concept. The energy is electric, the flavors bold, and the experience unforgettable.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> 1 Amiryan Street, Yerevan</p>
+                                <p><strong>Phone:</strong> <a href="tel:+37410545454">+374 10 545-454</a></p>
+                                <p><strong>Website:</strong> <a href="https://sherep.am" target="_blank">sherep.am</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Contemporary</span>
+                                <span class="card-tag">Open Kitchen</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Countryside Restaurants -->
+            <div class="region-group">
+                <h3 class="region-title">Countryside</h3>
+                <div class="cards-grid">
+                    <!-- Tsaghkunk -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&q=80" alt="Tsaghkunk Restaurant" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Ashtarak Region</span>
+                            <h3>Tsaghkunk</h3>
+                            <p class="card-subtitle">Village-to-Table</p>
+                            <p class="card-description">True farm-to-table dining led by Chef Arevik Martirosyan, featured in Vogue. First gained international attention when Noma co-founder Mads Refslund did a pop-up here.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> Tsaghkunk Village, Ashtarak</p>
+                                <p><strong>Phone:</strong> <a href="tel:+37494424242">+374 94 424-242</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Farm-to-Table</span>
+                                <span class="card-tag">Vogue Featured</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Yasaman -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Lake Sevan dining" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Lake Sevan</span>
+                            <h3>Yasaman</h3>
+                            <p class="card-subtitle">Lakeside Dining</p>
+                            <p class="card-description">Fresh fish from Lake Sevan's crystalline waters, served with panoramic views of Armenia's beloved "pearl." A destination dining experience where the setting rivals the cuisine.</p>
+                            <div class="card-contact">
+                                <p><strong>Location:</strong> Lake Sevan shoreline</p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Seafood</span>
+                                <span class="card-tag">Views</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wineries Section with Areni Story -->
+    <section id="wineries" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">6,100 Years of Winemaking</span>
+                <h2>Wineries</h2>
+                <p class="section-intro">Armenia is home to the world's oldest known winery. Today, a new generation of winemakers honors this heritage with exceptional wines from indigenous varietals</p>
+            </div>
+
+            <!-- Areni Discovery Story -->
+            <div class="discovery-story">
+                <div class="story-content">
+                    <span class="section-label">The Discovery</span>
+                    <h3>The World's Oldest Winery: Areni-1 Cave</h3>
+                    <p>In 2007, archaeologists made a discovery that would rewrite the history of winemaking. Deep within the Areni-1 cave in Armenia's Vayots Dzor province, they uncovered a complete 6,100-year-old winery—a millennium older than any previously known.</p>
+                    <p>The cave revealed a wine press, fermentation vat, storage jars, grape seeds, and dried grape vines. "For the first time, we have a complete archaeological picture of wine production," declared UCLA archaeologist Gregory Areshian.</p>
+                    <p>The cave's stable microclimate preserved everything remarkably well. Nearby burials with drinking cups suggest the wine was used in funeral rituals—perhaps humanity's oldest toast to the departed.</p>
+                    <div class="story-source">
+                        <a href="https://www.nationalgeographic.com/culture/article/110111-oldest-wine-press-making-winery-armenia-science-ucla" target="_blank">Read the full National Geographic article</a>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1504870712357-65ea720d6078?w=800&q=80" alt="Areni-1 Cave" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Areni Region Wineries -->
+            <div class="region-group">
+                <h3 class="region-title">Areni Wine Region (Vayots Dzor)</h3>
+                <div class="cards-grid">
+                    <!-- Trinity Canyon -->
+                    <article class="card card-featured">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80" alt="Trinity Canyon Vineyards" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Areni Region</span>
+                            <h3>Trinity Canyon Vineyards</h3>
+                            <p class="card-subtitle">Artisanal Excellence</p>
+                            <p class="card-description">Boutique winemaking at its finest in the heart of Armenia's premier wine region. Small-batch wines crafted from indigenous Areni Noir grapes grown in the dramatic canyon landscape.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> Areni Village, Vayots Dzor</p>
+                                <p><strong>Website:</strong> <a href="https://trinitycanyonvineyards.com" target="_blank">trinitycanyonvineyards.com</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Boutique</span>
+                                <span class="card-tag">Areni Noir</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Zorah -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=800&q=80" alt="Zorah Wines" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Yeghegnadzor</span>
+                            <h3>Zorah Wines</h3>
+                            <p class="card-subtitle">World-Class Recognition</p>
+                            <p class="card-description">Internationally acclaimed for their Karasi wine, aged in traditional clay amphorae buried underground. Zorah has put Armenian wine on the global map while staying true to millennia-old methods.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> Rind Village, Yeghegnadzor</p>
+                                <p><strong>Website:</strong> <a href="https://zorahwines.com" target="_blank">zorahwines.com</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Award-Winning</span>
+                                <span class="card-tag">Karasi</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Old Bridge -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=800&q=80" alt="Old Bridge Winery" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Areni</span>
+                            <h3>Old Bridge Winery</h3>
+                            <p class="card-subtitle">Heritage & Innovation</p>
+                            <p class="card-description">Where ancient winemaking traditions meet modern techniques. Known for exceptional Areni wines and commitment to showcasing the unique terroir of Armenia's most celebrated wine village.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> Areni Village, Vayots Dzor</p>
+                                <p><strong>Phone:</strong> <a href="tel:+37494001881">+374 94 001-881</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Traditional</span>
+                                <span class="card-tag">Tours</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Other Regions -->
+            <div class="region-group">
+                <h3 class="region-title">Other Wine Regions</h3>
+                <div class="cards-grid">
+                    <!-- Armenia Wine -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1507434965515-61970f2bd7c6?w=800&q=80" alt="Armenia Wine" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Sasunik</span>
+                            <h3>Armenia Wine</h3>
+                            <p class="card-subtitle">Wine Museum Experience</p>
+                            <p class="card-description">A comprehensive wine experience featuring a state-of-the-art facility and museum tracing Armenia's 6,000-year winemaking history. Extensive tastings and educational tours.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> Sasunik Village, Armavir</p>
+                                <p><strong>Website:</strong> <a href="https://armeniawine.am" target="_blank">armeniawine.am</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Museum</span>
+                                <span class="card-tag">Tastings</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Voskevaz -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1528823872057-9c018a7a7553?w=800&q=80" alt="Voskevaz Winery" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Aragatsotn</span>
+                            <h3>Voskevaz Winery</h3>
+                            <p class="card-subtitle">Historic Estate</p>
+                            <p class="card-description">One of Armenia's oldest operating wineries, dating back to the 19th century. Historic cellars, indigenous varietals, and deep commitment to preserving Armenian winemaking traditions.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> Voskevaz Village, Aragatsotn</p>
+                                <p><strong>Website:</strong> <a href="https://voskevaz.am" target="_blank">voskevaz.am</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Historic</span>
+                                <span class="card-tag">Estate</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Sites Section -->
+    <section id="cultural" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Sacred & Ancient</span>
+                <h2>Cultural Sites & Monasteries</h2>
+                <p class="section-intro">Armenia was the first nation to adopt Christianity in 301 AD. Its monasteries and temples stand as monuments to faith, artistry, and an enduring civilization</p>
+            </div>
+
+            <!-- Near Yerevan -->
+            <div class="region-group">
+                <h3 class="region-title">Near Yerevan (Day Trips)</h3>
+                <div class="cards-grid cards-large">
+                    <!-- Khor Virap -->
+                    <article class="card card-featured">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Khor_Virap_Monastery%2C_aerial_view.jpg/1280px-Khor_Virap_Monastery%2C_aerial_view.jpg" alt="Khor Virap Monastery with Mount Ararat" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">40 min from Yerevan</span>
+                            <h3>Khor Virap</h3>
+                            <p class="card-subtitle">Mount Ararat Views</p>
+                            <p class="card-description">Perhaps the most iconic view in Armenia: the ancient monastery with the snow-capped peak of Mount Ararat rising behind it. Here Gregory the Illuminator was imprisoned for 13 years before converting the Armenian king to Christianity in 301 AD.</p>
+                            <div class="card-contact">
+                                <p><strong>Location:</strong> Pokr Vedi, Ararat Province</p>
+                                <p><strong>Distance:</strong> 30 km south of Yerevan</p>
+                                <p><strong>Best time:</strong> Early morning for clearest Ararat views</p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Iconic</span>
+                                <span class="card-tag">Pilgrimage</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Geghard -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Geghard_Monastery%2C_Armenia_%2829573171725%29.jpg/1280px-Geghard_Monastery%2C_Armenia_%2829573171725%29.jpg" alt="Geghard Monastery" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">40 min from Yerevan</span>
+                            <h3>Geghard Monastery</h3>
+                            <p class="card-subtitle">UNESCO World Heritage</p>
+                            <p class="card-description">Partially carved out of living rock, Geghard is a masterpiece of medieval Armenian architecture. The acoustics within the rock-cut chambers create an ethereal experience, especially during liturgical singing. Once held the spear that wounded Christ.</p>
+                            <div class="card-contact">
+                                <p><strong>Location:</strong> Goght, Kotayk Province</p>
+                                <p><strong>UNESCO:</strong> Inscribed 2000</p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">UNESCO</span>
+                                <span class="card-tag">Rock-Cut</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Garni -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Garni_Temple%2C_Armenia_%2829573254235%29.jpg/1280px-Garni_Temple%2C_Armenia_%2829573254235%29.jpg" alt="Temple of Garni" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">30 min from Yerevan</span>
+                            <h3>Temple of Garni</h3>
+                            <p class="card-subtitle">Classical Colonnades</p>
+                            <p class="card-description">The only standing Greco-Roman colonnaded building in Armenia, this 1st-century pagan temple perches above the stunning Symphony of Stones basalt formations. A testament to Armenia's pre-Christian heritage.</p>
+                            <div class="card-contact">
+                                <p><strong>Location:</strong> Garni Village, Kotayk Province</p>
+                                <p><strong>Tip:</strong> Combine with Geghard for a half-day trip</p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Pagan</span>
+                                <span class="card-tag">Hellenistic</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Southern Armenia -->
+            <div class="region-group">
+                <h3 class="region-title">Southern Armenia</h3>
+                <div class="cards-grid">
+                    <!-- Noravank -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Noravank_Monastery%2C_Armenia.jpg/1280px-Noravank_Monastery%2C_Armenia.jpg" alt="Noravank Monastery" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">2 hours from Yerevan</span>
+                            <h3>Noravank Monastery</h3>
+                            <p class="card-subtitle">Red-Rock Canyon</p>
+                            <p class="card-description">Set within a dramatic red-rock canyon, this 13th-century monastery showcases exquisite medieval Armenian architecture. The two-story church features unique sculptural reliefs and a narrow stairway to the upper level.</p>
+                            <div class="card-contact">
+                                <p><strong>Location:</strong> Amaghu Gorge, Vayots Dzor</p>
+                                <p><strong>Best time:</strong> Late afternoon for golden light on red cliffs</p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Medieval</span>
+                                <span class="card-tag">Architecture</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tatev -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Tatev_Monastery_from_the_Wings_of_Tatev_Tramway.jpg/1280px-Tatev_Monastery_from_the_Wings_of_Tatev_Tramway.jpg" alt="Tatev Monastery" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">4 hours from Yerevan</span>
+                            <h3>Tatev Monastery</h3>
+                            <p class="card-subtitle">Wings of Tatev Aerial Tramway</p>
+                            <p class="card-description">Reach this medieval monastery via the world's longest reversible aerial tramway (5.7 km), soaring over the dramatic Vorotan Gorge. Once home to one of the most important medieval Armenian universities.</p>
+                            <div class="card-contact">
+                                <p><strong>Location:</strong> Tatev, Syunik Province</p>
+                                <p><strong>Tramway:</strong> <a href="https://www.tatever.am/en" target="_blank">tatever.am</a></p>
+                                <p><strong>Hours:</strong> 10am-6pm (varies by season)</p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Tramway</span>
+                                <span class="card-tag">Medieval</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Lake Sevan -->
+            <div class="region-group">
+                <h3 class="region-title">Lake Sevan</h3>
+                <div class="cards-grid">
+                    <!-- Sevanavank -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Sevanavank_Monastery%2C_Armenia.jpg/1280px-Sevanavank_Monastery%2C_Armenia.jpg" alt="Sevanavank Monastery" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">1 hour from Yerevan</span>
+                            <h3>Sevanavank</h3>
+                            <p class="card-subtitle">Lake Sevan Monastery</p>
+                            <p class="card-description">Originally built on an island (now a peninsula after Soviet-era lake drainage), these 9th-century churches command sweeping views of Lake Sevan's turquoise waters at nearly 2,000 meters altitude.</p>
+                            <div class="card-contact">
+                                <p><strong>Location:</strong> Sevan Peninsula, Gegharkunik</p>
+                                <p><strong>Steps:</strong> 230 steps to reach the top</p>
+                                <p><strong>Admission:</strong> Free</p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Lakeside</span>
+                                <span class="card-tag">Panoramic</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Museums & Markets Section -->
+    <section id="museums" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Discover & Collect</span>
+                <h2>Art Galleries & Markets</h2>
+                <p class="section-intro">From world-class art collections to vibrant markets and unique museums</p>
+            </div>
+
+            <div class="region-group">
+                <h3 class="region-title">Yerevan</h3>
+                <div class="cards-grid">
+                    <!-- Cafesjian -->
+                    <article class="card card-featured">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Yerevan_Cascade.jpg/1280px-Yerevan_Cascade.jpg" alt="Cafesjian Center - The Cascade" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Yerevan</span>
+                            <h3>Cafesjian Center for the Arts</h3>
+                            <p class="card-subtitle">The Cascade</p>
+                            <p class="card-description">An extraordinary museum built within Yerevan's iconic Cascade stairway (572 steps!). The collection spans modern and contemporary art, with stunning outdoor Botero sculptures and panoramic city views.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> 10 Tamanyan Street, Yerevan</p>
+                                <p><strong>Hours:</strong> Tue-Thu 10am-5pm, Fri-Sun 10am-8pm</p>
+                                <p><strong>Website:</strong> <a href="https://www.cmf.am" target="_blank">cmf.am</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Modern Art</span>
+                                <span class="card-tag">Architecture</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Matenadaran -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Matenadaran%2C_Yerevan%2C_2016.jpg/1280px-Matenadaran%2C_Yerevan%2C_2016.jpg" alt="Matenadaran" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Yerevan</span>
+                            <h3>Matenadaran</h3>
+                            <p class="card-subtitle">Ancient Manuscripts</p>
+                            <p class="card-description">One of the world's great repositories of medieval manuscripts, housing over 17,000 ancient texts including illuminated gospels, scientific treatises, and poetry spanning centuries of Armenian scholarship.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> 53 Mashtots Avenue, Yerevan</p>
+                                <p><strong>Hours:</strong> Tue-Sat 10am-5pm</p>
+                                <p><strong>Website:</strong> <a href="https://www.matenadaran.am" target="_blank">matenadaran.am</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Manuscripts</span>
+                                <span class="card-tag">UNESCO Memory</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ARARAT Museum -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Ararat_brandy_factory.jpg/1280px-Ararat_brandy_factory.jpg" alt="ARARAT Brandy Museum" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Yerevan</span>
+                            <h3>ARARAT Museum</h3>
+                            <p class="card-subtitle">Brandy Tastings</p>
+                            <p class="card-description">The legendary ARARAT brandy, once favored by Churchill, is crafted here. Tour the historic cellars, learn the art of Armenian brandy-making, and taste exceptional vintages.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> 2 Admiral Isakov Avenue, Yerevan</p>
+                                <p><strong>Phone:</strong> <a href="tel:+37410540000">+374 10 540-000</a></p>
+                                <p><strong>Website:</strong> <a href="https://www.araratbrandy.com" target="_blank">araratbrandy.com</a></p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Brandy</span>
+                                <span class="card-tag">Heritage</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Vernissage -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Vernissage_Market_Yerevan.jpg/1280px-Vernissage_Market_Yerevan.jpg" alt="Vernissage Market" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Yerevan</span>
+                            <h3>Vernissage Market</h3>
+                            <p class="card-subtitle">Crafts & Antiques</p>
+                            <p class="card-description">A sprawling open-air market offering hand-carved chess sets, intricate carpets, Soviet memorabilia, and traditional crafts. Best on weekends when the market is at its fullest.</p>
+                            <div class="card-contact">
+                                <p><strong>Location:</strong> Near Republic Square, Yerevan</p>
+                                <p><strong>Hours:</strong> Daily, best on weekends</p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Market</span>
+                                <span class="card-tag">Crafts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- GUM Market -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=800&q=80" alt="GUM Market" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location">Yerevan</span>
+                            <h3>GUM Market</h3>
+                            <p class="card-subtitle">Food Gifts</p>
+                            <p class="card-description">The covered central market bursting with dried fruits, spices, sweets, and local delicacies. Perfect for edible souvenirs and experiencing daily Armenian life.</p>
+                            <div class="card-contact">
+                                <p><strong>Address:</strong> 35 Mashtots Avenue, Yerevan</p>
+                                <p><strong>Hours:</strong> Daily 9am-7pm</p>
+                            </div>
+                            <div class="card-meta">
+                                <span class="card-tag">Food</span>
+                                <span class="card-tag">Local Life</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Armenian Legends & Facts Section -->
+    <section id="legends" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Curious Discoveries</span>
+                <h2>Armenian Legends & Facts</h2>
+                <p class="section-intro">Remarkable discoveries and fascinating stories from the cradle of civilization</p>
+            </div>
+
+            <div class="legends-grid">
+                <!-- World's Oldest Shoe -->
+                <article class="legend-card">
+                    <div class="legend-icon">👟</div>
+                    <h3>The World's Oldest Leather Shoe</h3>
+                    <p class="legend-date">5,500 years old</p>
+                    <p>In 2008, archaeologists discovered a perfectly preserved leather moccasin in the Areni-1 cave—1,000 years older than the Great Pyramid of Giza. The shoe, stuffed with grass (perhaps as insulation), is now displayed at the History Museum of Armenia.</p>
+                    <p class="legend-fact">"I was amazed to find that even the shoe-laces were preserved," recalled PhD student Diana Zardaryan, who made the discovery.</p>
+                    <a href="https://www.nationalgeographic.com/culture/article/100609-worlds-oldest-leather-shoe-armenia-science" target="_blank" class="legend-source">Read in National Geographic</a>
+                </article>
+
+                <!-- World's Oldest Winery -->
+                <article class="legend-card">
+                    <div class="legend-icon">🍷</div>
+                    <h3>The World's Oldest Winery</h3>
+                    <p class="legend-date">6,100 years old</p>
+                    <p>The Areni-1 cave also yielded the world's oldest complete winery—a wine press, fermentation vat, storage jars, and grape remains. This discovery pushed back the history of winemaking by over 1,000 years.</p>
+                    <p class="legend-fact">"This is the earliest, most reliable evidence of wine production," declared UCLA archaeologist Gregory Areshian.</p>
+                    <a href="https://www.nationalgeographic.com/culture/article/110111-oldest-wine-press-making-winery-armenia-science-ucla" target="_blank" class="legend-source">Read in National Geographic</a>
+                </article>
+
+                <!-- First Christian Nation -->
+                <article class="legend-card">
+                    <div class="legend-icon">⛪</div>
+                    <h3>First Christian Nation</h3>
+                    <p class="legend-date">301 AD</p>
+                    <p>Armenia became the first nation to adopt Christianity as its state religion in 301 AD—a decade before Rome's Edict of Milan. Gregory the Illuminator, imprisoned for 13 years in a pit at Khor Virap, eventually converted King Tiridates III.</p>
+                    <p class="legend-fact">Today, more than 4,000 monasteries and churches dot the Armenian landscape.</p>
+                    <a href="https://whc.unesco.org/en/list/1011/" target="_blank" class="legend-source">UNESCO World Heritage</a>
+                </article>
+
+                <!-- Noah's Ark -->
+                <article class="legend-card">
+                    <div class="legend-icon">🏔️</div>
+                    <h3>Mount Ararat & Noah's Ark</h3>
+                    <p class="legend-date">Biblical tradition</p>
+                    <p>According to the Book of Genesis, Noah's Ark came to rest on Mount Ararat after the great flood. While the mountain now lies in Turkey, it remains the sacred symbol of Armenia, visible from Yerevan and appearing on the national coat of arms.</p>
+                    <p class="legend-fact">Armenians often say they are descendants of Noah through his great-great-grandson Hayk.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eric's Floating Sidebar -->
+    <aside class="eric-sidebar" id="eric-sidebar">
+        <button class="eric-toggle" id="eric-toggle">
+            <span class="toggle-icon">📝</span>
+            <span class="toggle-text">Eric's Travel Log</span>
+        </button>
+        <div class="eric-panel">
+            <div class="eric-panel-header">
+                <img src="https://theasiagroup.com/wp-content/uploads/2025/07/Eric-Boyle.png" alt="Eric Boyle" class="eric-avatar">
+                <div class="eric-header-text">
+                    <h4>Eric Boyle's Travel Log</h4>
+                    <p class="eric-subtitle">The Armenian Husband</p>
+                </div>
+            </div>
+            <div class="eric-panel-bio">
+                <p>With exceptional observation skills and unique language abilities—<strong>street-fluent in Armenian and 7 other languages</strong> including Russian, German, Kyrgyz, and Ukrainian—Eric gets the culture and people like no other.</p>
+                <p>From his early travels to Germany and Kyrgyzstan, living for years in Central Asia and Ukraine, plus work travel throughout Asia, Africa, and Europe, his anthropological knowledge and cultural nuance is unmatched.</p>
+                <p class="eric-meeting-story">A Peace Corps volunteer in Kyrgyzstan, he met Yulia at Indiana University. His Russian was so perfect she thought he was from the USSR.</p>
+            </div>
+            <div class="eric-panel-entries">
+                <h5>Field Notes</h5>
+                <div class="eric-entry-placeholder">
+                    <p>✍️ Travel observations coming soon...</p>
+                    <p class="placeholder-sub">Cultural insights, local tips, and stories from the field</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Media Feed Section -->
+    <section id="media" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">In The Press</span>
+                <h2>Armenia in the Media</h2>
+                <p class="section-intro">Recent coverage from leading travel publications</p>
+            </div>
+
+            <div class="media-articles">
+                <!-- Vogue Feature -->
+                <article class="media-article featured">
+                    <div class="media-source">Vogue</div>
+                    <h3><a href="https://en.armradio.am/2024/08/16/female-chefs-blazing-new-trail-in-armenian-cuisine-vogue/" target="_blank">Meet the Female Chefs Blazing a New Trail in Armenian Cuisine</a></h3>
+                    <p>Five women at the forefront of redefining Armenian cuisine, from Arevik Martirosyan of Tsaghkunk to Mariam Saghatelyan of In Vino wine bar.</p>
+                    <span class="media-date">August 2024</span>
+                </article>
+
+                <!-- AFAR -->
+                <article class="media-article">
+                    <div class="media-source">AFAR</div>
+                    <h3><a href="https://www.afar.com/magazine/heavenly-music-space-age-architecture-and-the-many-surprises-of-armenia" target="_blank">Heavenly Music, Space-Age Architecture, and the Many Surprises of Armenia</a></h3>
+                    <p>"Discover soulful Soviet architecture and drink vodka for breakfast in Armenia, a little country with a big personality."</p>
+                    <span class="media-date">April 2024</span>
+                </article>
+
+                <!-- National Geographic -->
+                <article class="media-article">
+                    <div class="media-source">National Geographic</div>
+                    <h3><a href="https://www.nationalgeographic.com/travel/article/paid-content-why-small-but-mighty-armenia-should-be-on-your-agenda-for-2024" target="_blank">Why Small But Mighty Armenia Should Be On Your Agenda</a></h3>
+                    <p>Mythical mountains, ancient monasteries, and a rapidly developing farm-to-table food scene.</p>
+                    <span class="media-date">2024</span>
+                </article>
+
+                <!-- National Geographic Wine -->
+                <article class="media-article">
+                    <div class="media-source">National Geographic</div>
+                    <h3><a href="https://www.nationalgeographic.com/travel/article/paid-content-armenia-best-wineries" target="_blank">How to Plan a Wine-Tasting Tour in Armenia</a></h3>
+                    <p>Explore the top wine regions and vineyards in the country with 6,000 years of winemaking heritage.</p>
+                    <span class="media-date">2024</span>
+                </article>
+
+                <!-- Condé Nast Traveler -->
+                <article class="media-article">
+                    <div class="media-source">Condé Nast Traveler</div>
+                    <h3><a href="https://armenpress.am/en/article/997467" target="_blank">Armenia: One of the Most Talked-About Destinations</a></h3>
+                    <p>"There's more to the tiny Caucasus nation than what makes the nightly news."</p>
+                    <span class="media-date">Travel List Feature</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section id="map" class="section section-map section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Explore</span>
+                <h2>Interactive Map</h2>
+                <p class="section-intro">Discover all locations across Armenia</p>
+            </div>
+            <div class="map-container">
+                <div id="armenia-map"></div>
+                <div class="map-legend">
+                    <div class="legend-item">
+                        <span class="legend-marker hotel"></span>
+                        <span>Hotels</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-marker restaurant"></span>
+                        <span>Restaurants</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-marker winery"></span>
+                        <span>Wineries</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-marker cultural"></span>
+                        <span>Cultural Sites</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-marker museum"></span>
+                        <span>Museums & Markets</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GOALS Armenia Section -->
+    <section id="goals" class="section section-goals">
+        <div class="container">
+            <div class="goals-content">
+                <div class="goals-text">
+                    <span class="section-label">Give Back</span>
+                    <h3>GOALS Armenia</h3>
+                    <p>Yulia serves on the board of GOALS Armenia, an organization using sport for social impact to equip youth with confidence and resilience. GOALS has established soccer leagues for girls across 8 regions of Armenia, training over 750 dedicated players and building a culture of empathy, kindness, and respect.</p>
+                    <a href="https://www.goalsarmenia.org" target="_blank" class="goals-link">Learn more at goalsarmenia.org</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-mark logo-mark-ornate"><span class="letter-a">A</span><span class="letter-b">B</span></span>
+                    <p>ArmenBoyle Travel Collection</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Explore Armenia</h4>
+                    <ul>
+                        <li><a href="#hotels">Hotels</a></li>
+                        <li><a href="#dining">Dining</a></li>
+                        <li><a href="#wineries">Wineries</a></li>
+                        <li><a href="#cultural">Cultural Sites</a></li>
+                        <li><a href="#museums">Museums & Markets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="#legends">Legends & Facts</a></li>
+                        <li><a href="#map">Interactive Map</a></li>
+                                                <li><a href="#media">Media</a></li>
+                        <li><a href="#goals">GOALS Armenia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-countries">
+                    <h4>Countries</h4>
+                    <ul>
+                        <li><a href="#" class="active">Armenia</a></li>
+                        <li><a href="#" class="coming-soon">More coming soon...</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ArmenBoyle Travel Collection. Private use only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
