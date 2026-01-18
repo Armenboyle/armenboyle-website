@@ -540,12 +540,12 @@ a:hover {
     font-style: italic;
     font-weight: 300;
     color: var(--color-gray-light);
-    margin-bottom: 0;
+    margin-bottom: var(--spacing-lg);
 }
 
 .hero-scroll {
     position: absolute;
-    bottom: var(--spacing-lg);
+    bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
