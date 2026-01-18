@@ -349,6 +349,33 @@ a:hover {
     /* No border styling */
 }
 
+/* Image-based logo with ancient Armenian letters */
+.logo-mark-images {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.logo-letter {
+    height: 32px;
+    width: auto;
+    filter: sepia(100%) saturate(300%) brightness(95%) hue-rotate(5deg);
+    transition: all var(--transition-fast);
+}
+
+.logo-letter-a {
+    margin-right: -2px;
+}
+
+.logo:hover .logo-letter {
+    filter: sepia(100%) saturate(400%) brightness(110%) hue-rotate(5deg);
+}
+
+/* Fallback for when images don't load */
+.logo-mark-images img {
+    background: transparent;
+}
+
 .logo-text {
     font-family: var(--font-display);
     font-size: 1.25rem;
@@ -1253,6 +1280,10 @@ a.card-image:hover img {
     font-size: 2rem;
     margin-bottom: var(--spacing-sm);
     display: block;
+}
+
+.footer-logo .logo-letter {
+    height: 48px;
 }
 
 .footer-brand p {
