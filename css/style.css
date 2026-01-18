@@ -635,6 +635,14 @@ a:hover {
     margin-bottom: 0;
 }
 
+.intro-signature {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--color-gold);
+    margin-top: var(--spacing-md);
+}
+
 /* =====================================================
    Press Banner
    ===================================================== */
