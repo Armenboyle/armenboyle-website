@@ -353,25 +353,27 @@ a:hover {
 .logo-mark-images {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
 }
 
 .logo-letter {
-    height: 28px;
+    height: 30px;
     width: auto;
-    background: transparent;
+    background: none;
     border: none;
-    filter: sepia(100%) saturate(300%) brightness(110%) hue-rotate(15deg);
+    padding: 0;
+    margin: 0;
+    filter: brightness(0) saturate(100%) invert(76%) sepia(50%) saturate(500%) hue-rotate(5deg) brightness(95%);
     transition: filter var(--transition-fast);
 }
 
 .logo:hover .logo-letter {
-    filter: sepia(100%) saturate(400%) brightness(130%) hue-rotate(15deg);
+    filter: brightness(0) saturate(100%) invert(85%) sepia(60%) saturate(600%) hue-rotate(5deg) brightness(105%);
 }
 
 /* Fallback for when images don't load */
 .logo-mark-images img {
-    background: transparent;
+    background: none;
 }
 
 .logo-text {
