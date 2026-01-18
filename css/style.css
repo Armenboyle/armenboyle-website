@@ -516,6 +516,7 @@ a:hover {
     z-index: 1;
     text-align: center;
     padding: var(--spacing-md);
+    padding-bottom: 120px;
 }
 
 .hero-subtitle {

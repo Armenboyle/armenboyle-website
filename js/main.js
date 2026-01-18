@@ -407,98 +407,82 @@ function initMap() {
         museum: createIcon('#7A9B76')
     };
 
-    // Location data
+    // Location data with corrected coordinates
     const locations = [
         // Hotels
         {
-            name: 'The Alexander, a Luxury Collection Hotel',
+            name: 'The Alexander Hotel',
             category: 'hotel',
             type: 'Hotels',
             description: 'Premier luxury hotel in Yerevan',
-            lat: 40.1792,
+            lat: 40.1775,
             lng: 44.5126
         },
         {
-            name: 'Seven Visions Resort & Places, The Dvin',
+            name: 'Tufenkian Historic Yerevan',
             category: 'hotel',
             type: 'Hotels',
-            description: 'Boutique accommodations in Yerevan',
-            lat: 40.1850,
-            lng: 44.5150
-        },
-        {
-            name: 'Grand Hotel Yerevan',
-            category: 'hotel',
-            type: 'Hotels',
-            description: 'Historic elegance in central Yerevan',
-            lat: 40.1773,
-            lng: 44.5086
+            description: 'Heritage boutique hotel in Yerevan',
+            lat: 40.1811,
+            lng: 44.5139
         },
         {
             name: 'Tufenkian Old Dilijan Complex',
             category: 'hotel',
             type: 'Hotels',
             description: 'Mountain retreat in Dilijan',
-            lat: 40.7416,
-            lng: 44.8668
+            lat: 40.7407,
+            lng: 44.8603
         },
         {
             name: 'Tufenkian Avan Marak Tsapatagh',
             category: 'hotel',
             type: 'Hotels',
             description: 'Lakeside retreat at Lake Sevan',
-            lat: 40.3233,
-            lng: 45.2667
+            lat: 40.3358,
+            lng: 45.2453
         },
 
         // Restaurants
         {
-            name: 'Mayrig',
+            name: 'Sherep',
             category: 'restaurant',
             type: 'Restaurants & Dining',
-            description: 'Mediterranean-Armenian refined cuisine',
-            lat: 40.1847,
-            lng: 44.5155
+            description: 'High-energy open kitchen experience',
+            lat: 40.1792,
+            lng: 44.5125
         },
         {
             name: 'Lavash',
             category: 'restaurant',
             type: 'Restaurants & Dining',
             description: 'Elevated Armenian classics with tonir bread',
-            lat: 40.1823,
+            lat: 40.1856,
             lng: 44.5103
         },
         {
-            name: 'Sherep',
+            name: 'Dalan',
             category: 'restaurant',
             type: 'Restaurants & Dining',
-            description: 'High-energy open kitchen experience',
-            lat: 40.1795,
-            lng: 44.5065
+            description: 'Hidden courtyard gem',
+            lat: 40.1839,
+            lng: 44.5136
         },
         {
             name: 'In Vino',
             category: 'restaurant',
             type: 'Restaurants & Dining',
-            description: 'Wine bar excellence',
-            lat: 40.1810,
+            description: 'Wine bar excellence on Saryan Street',
+            lat: 40.1819,
             lng: 44.5092
         },
         {
             name: 'Tsaghkunk',
             category: 'restaurant',
             type: 'Restaurants & Dining',
-            description: 'Village-to-table dining',
-            lat: 40.2333,
-            lng: 44.7667
-        },
-        {
-            name: 'Yasaman',
-            category: 'restaurant',
-            type: 'Restaurants & Dining',
-            description: 'Lakeside dining at Lake Sevan',
-            lat: 40.3667,
-            lng: 45.0167
+            description: 'Village-to-table dining in Ashtarak',
+            lat: 40.2989,
+            lng: 44.3619
         },
 
         // Wineries
@@ -506,49 +490,41 @@ function initMap() {
             name: 'Trinity Canyon Vineyards',
             category: 'winery',
             type: 'Wineries',
-            description: 'Artisanal boutique winery',
-            lat: 39.7167,
-            lng: 45.1833
+            description: 'Artisanal boutique winery in Areni',
+            lat: 39.7178,
+            lng: 45.1847
         },
         {
             name: 'Old Bridge Winery',
             category: 'winery',
             type: 'Wineries',
             description: 'Heritage winemaking in Areni',
-            lat: 39.7211,
-            lng: 45.1817
+            lat: 39.7189,
+            lng: 45.1806
         },
         {
             name: 'Zorah Wines',
             category: 'winery',
             type: 'Wineries',
-            description: 'Award-winning Karasi wines',
-            lat: 39.7633,
-            lng: 45.3317
+            description: 'Award-winning Karasi wines in Rind',
+            lat: 39.7556,
+            lng: 45.3017
         },
         {
             name: 'Armenia Wine',
             category: 'winery',
             type: 'Wineries',
-            description: 'Wine museum and tastings',
-            lat: 40.0500,
+            description: 'Wine museum in Sasunik',
+            lat: 40.0483,
             lng: 44.2833
-        },
-        {
-            name: 'Van Ardi',
-            category: 'winery',
-            type: 'Wineries',
-            description: 'High-altitude viticulture',
-            lat: 40.0917,
-            lng: 44.1500
         },
         {
             name: 'Voskevaz Winery',
             category: 'winery',
             type: 'Wineries',
             description: 'Historic estate winery',
-            lat: 40.2500,
-            lng: 44.2500
+            lat: 40.2167,
+            lng: 44.2833
         },
 
         // Cultural Sites
@@ -589,8 +565,8 @@ function initMap() {
             category: 'cultural',
             type: 'Cultural Sites',
             description: '9th-century monastery at Lake Sevan',
-            lat: 40.5667,
-            lng: 44.9500
+            lat: 40.5579,
+            lng: 45.0088
         },
         {
             name: 'Tatev Monastery',
@@ -607,7 +583,7 @@ function initMap() {
             category: 'museum',
             type: 'Museums & Markets',
             description: 'Modern art museum at the Cascade',
-            lat: 40.1914,
+            lat: 40.1907,
             lng: 44.5153
         },
         {
@@ -619,27 +595,11 @@ function initMap() {
             lng: 44.5211
         },
         {
-            name: 'Parajanov Museum',
-            category: 'museum',
-            type: 'Museums & Markets',
-            description: 'Dedicated to filmmaker Sergei Parajanov',
-            lat: 40.1858,
-            lng: 44.4997
-        },
-        {
-            name: 'Mirzoyan Library',
-            category: 'museum',
-            type: 'Museums & Markets',
-            description: 'Cultural hub and bookshop',
-            lat: 40.1817,
-            lng: 44.5078
-        },
-        {
             name: 'Vernissage Market',
             category: 'museum',
             type: 'Museums & Markets',
             description: 'Crafts and antiques open-air market',
-            lat: 40.1783,
+            lat: 40.1778,
             lng: 44.5117
         },
         {
@@ -655,16 +615,8 @@ function initMap() {
             category: 'museum',
             type: 'Museums & Markets',
             description: 'Legendary brandy museum and tastings',
-            lat: 40.1800,
+            lat: 40.1789,
             lng: 44.4933
-        },
-        {
-            name: 'Areni-1 Cave',
-            category: 'museum',
-            type: 'Museums & Markets',
-            description: "World's oldest winery archaeological site",
-            lat: 39.7250,
-            lng: 45.1833
         }
     ];
 
