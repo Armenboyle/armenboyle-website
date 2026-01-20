@@ -611,12 +611,12 @@ function initMap() {
             lng: 44.5042
         },
         {
-            name: 'ARARAT Museum',
-            category: 'museum',
-            type: 'Museums & Markets',
-            description: 'Legendary brandy museum and tastings',
-            lat: 40.1789,
-            lng: 44.4933
+            name: 'Ararat Brandy Factory',
+            category: 'cultural',
+            type: 'Cultural Sites',
+            description: 'Legendary brandy factory with tours and tastings',
+            lat: 40.1678,
+            lng: 44.4942
         }
     ];
 
