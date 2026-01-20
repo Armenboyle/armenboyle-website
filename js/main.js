@@ -562,6 +562,14 @@ function initMap() {
 
         // Museums & Markets
         {
+            name: 'Sergei Parajanov Museum',
+            category: 'museum',
+            type: 'Museums & Markets',
+            description: 'Legendary filmmaker and artist museum',
+            lat: 40.1856,
+            lng: 44.5028
+        },
+        {
             name: 'Cafesjian Center for the Arts',
             category: 'museum',
             type: 'Museums & Markets',
