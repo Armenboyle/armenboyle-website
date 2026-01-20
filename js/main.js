@@ -578,6 +578,14 @@ function initMap() {
             lng: 44.5211
         },
         {
+            name: 'Mher Chatinyan Home Studio',
+            category: 'museum',
+            type: 'Museums & Markets',
+            description: 'Private contemporary artist studio',
+            lat: 40.1850,
+            lng: 44.5150
+        },
+        {
             name: 'Vernissage Market',
             category: 'museum',
             type: 'Museums & Markets',
