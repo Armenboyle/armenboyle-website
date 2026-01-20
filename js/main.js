@@ -586,6 +586,14 @@ function initMap() {
             lng: 44.5150
         },
         {
+            name: 'Aguletsi House-Museum',
+            category: 'museum',
+            type: 'Museums & Markets',
+            description: 'Armenian heritage and ethnography collection',
+            lat: 40.1983,
+            lng: 44.5089
+        },
+        {
             name: 'Vernissage Market',
             category: 'museum',
             type: 'Museums & Markets',
