@@ -487,14 +487,6 @@ function initMap() {
 
         // Wineries
         {
-            name: 'Trinity Canyon Vineyards',
-            category: 'winery',
-            type: 'Wineries',
-            description: 'Artisanal boutique winery in Areni',
-            lat: 39.7178,
-            lng: 45.1847
-        },
-        {
             name: 'Old Bridge Winery',
             category: 'winery',
             type: 'Wineries',
