@@ -518,15 +518,6 @@ function initMap() {
             lat: 40.0483,
             lng: 44.2833
         },
-        {
-            name: 'Voskevaz Winery',
-            category: 'winery',
-            type: 'Wineries',
-            description: 'Historic estate winery',
-            lat: 40.2167,
-            lng: 44.2833
-        },
-
         // Cultural Sites
         {
             name: 'Khor Virap',
