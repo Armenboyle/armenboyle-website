@@ -453,6 +453,14 @@ function initMap() {
             lng: 44.5125
         },
         {
+            name: 'MOV Restaurant',
+            category: 'restaurant',
+            type: 'Restaurants & Dining',
+            description: 'Armenian culinary heritage on Pushkin Street',
+            lat: 40.1847,
+            lng: 44.5133
+        },
+        {
             name: 'Lavash',
             category: 'restaurant',
             type: 'Restaurants & Dining',
