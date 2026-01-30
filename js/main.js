@@ -419,6 +419,14 @@ function initMap() {
             lng: 44.5126
         },
         {
+            name: 'Armenia Marriott Hotel',
+            category: 'hotel',
+            type: 'Hotels',
+            description: 'Landmark hotel on Republic Square',
+            lat: 40.1774,
+            lng: 44.5127
+        },
+        {
             name: 'Tufenkian Historic Yerevan',
             category: 'hotel',
             type: 'Hotels',
