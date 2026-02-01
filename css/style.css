@@ -871,6 +871,280 @@ a.card-image:hover img {
 }
 
 /* =====================================================
+   Editorial Hotel Layout (Magazine Style)
+   ===================================================== */
+.editorial-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.editorial-intro {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl);
+    text-align: center;
+}
+
+.editorial-intro .section-label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.editorial-intro h2 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: 0.02em;
+}
+
+.editorial-intro .lead-text {
+    font-size: 1.2rem;
+    color: var(--color-gray-light);
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* Featured Hero Hotel */
+.hotel-hero {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    align-items: center;
+}
+
+.hotel-hero-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.hotel-hero-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.hotel-hero-image:hover img {
+    transform: scale(1.03);
+}
+
+.hotel-hero-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+    pointer-events: none;
+}
+
+.hotel-hero-content {
+    padding: var(--spacing-md);
+}
+
+.hotel-hero-location {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-gold);
+    margin-bottom: var(--spacing-sm);
+}
+
+.hotel-hero-content h3 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.2;
+}
+
+.hotel-hero-content h3 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.hotel-hero-content h3 a:hover {
+    color: var(--color-gold);
+}
+
+.hotel-hero-subtitle {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-gold-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.hotel-hero-description {
+    font-size: 1.05rem;
+    color: var(--color-gray-light);
+    line-height: 1.9;
+    margin-bottom: var(--spacing-md);
+}
+
+.hotel-hero-details {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+    line-height: 1.8;
+}
+
+.hotel-hero-details a {
+    color: var(--color-gold);
+    text-decoration: none;
+}
+
+.hotel-hero-details a:hover {
+    text-decoration: underline;
+}
+
+/* Region Divider */
+.region-divider {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+.region-divider::before,
+.region-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(201, 162, 39, 0.3), transparent);
+}
+
+.region-divider h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-white);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Editorial Card Grid */
+.editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.editorial-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    background: transparent;
+    border: none;
+}
+
+.editorial-card-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+}
+
+.editorial-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.editorial-card:hover .editorial-card-image img {
+    transform: scale(1.05);
+}
+
+.editorial-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-sm) 0;
+}
+
+.editorial-card-location {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-gold);
+    margin-bottom: var(--spacing-xs);
+}
+
+.editorial-card-content h4 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.3;
+}
+
+.editorial-card-content h4 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.editorial-card-content h4 a:hover {
+    color: var(--color-gold);
+}
+
+.editorial-card-subtitle {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--color-gold-light);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.editorial-card-description {
+    font-size: 0.9rem;
+    color: var(--color-gray-light);
+    line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+    .hotel-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hotel-hero-image img {
+        height: 400px;
+    }
+
+    .editorial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .editorial-card {
+        grid-template-columns: 1fr 1.2fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .editorial-intro h2 {
+        font-size: 2.2rem;
+    }
+
+    .hotel-hero-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .editorial-card {
+        grid-template-columns: 1fr;
+    }
+
+    .editorial-card-image {
+        aspect-ratio: 16/10;
+    }
+}
+
+/* =====================================================
    Map Section
    ===================================================== */
 .section-map {
