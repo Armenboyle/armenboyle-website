@@ -720,6 +720,127 @@ a:hover {
 }
 
 /* =====================================================
+   Traveler's Notes
+   ===================================================== */
+.travelers-notes {
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(180deg, var(--color-cream) 0%, #ebe7df 100%);
+    color: var(--color-dark);
+}
+
+.notes-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.travelers-notes .section-label {
+    color: var(--color-gold-dark);
+}
+
+.travelers-notes h2 {
+    color: var(--color-dark);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    margin-bottom: 0;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+}
+
+.note-card {
+    padding: var(--spacing-md);
+    background: rgba(255, 255, 255, 0.7);
+    border-left: 3px solid var(--color-gold);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.note-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.note-card h4 {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-gray-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.note-highlight {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.3;
+}
+
+.note-card p {
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-xs);
+}
+
+.note-card p:last-of-type {
+    margin-bottom: 0;
+}
+
+.note-card-featured {
+    background: var(--color-dark);
+    color: var(--color-cream);
+    border-left-color: var(--color-gold-light);
+}
+
+.note-card-featured h4 {
+    color: var(--color-gold-light);
+}
+
+.note-card-featured .note-highlight {
+    color: var(--color-white);
+}
+
+.note-card-featured p {
+    color: var(--color-gray-light);
+}
+
+.note-link {
+    display: inline-block;
+    margin-top: var(--spacing-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-gold-light);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color var(--transition-fast);
+}
+
+.note-link:hover {
+    color: var(--color-gold);
+}
+
+@media (max-width: 1024px) {
+    .notes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .travelers-notes {
+        padding: var(--spacing-lg) 0;
+    }
+}
+
+/* =====================================================
    Cards Grid
    ===================================================== */
 .cards-grid {
