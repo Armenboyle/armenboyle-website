@@ -841,6 +841,97 @@ a:hover {
 }
 
 /* =====================================================
+   Section Mini Maps
+   ===================================================== */
+.section-with-map {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: var(--spacing-lg);
+    align-items: start;
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-with-map .section-header,
+.section-with-map .editorial-intro {
+    margin-bottom: 0;
+}
+
+.mini-map-container {
+    position: sticky;
+    top: 100px;
+}
+
+.mini-map {
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.section:not(.section-dark) .mini-map {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.mini-map-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-gray);
+    text-align: center;
+    margin-top: var(--spacing-xs);
+    margin-bottom: 0;
+}
+
+.section:not(.section-dark) .mini-map-label {
+    color: var(--color-gray-dark);
+}
+
+/* Leaflet customization for mini maps */
+.mini-map .leaflet-control-zoom {
+    display: none;
+}
+
+.mini-map .leaflet-control-attribution {
+    font-size: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.mini-map .leaflet-control-attribution a {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 1024px) {
+    .section-with-map {
+        grid-template-columns: 1fr;
+    }
+
+    .mini-map-container {
+        position: relative;
+        top: 0;
+        max-width: 400px;
+        margin: 0 auto var(--spacing-md);
+        order: -1;
+    }
+
+    .mini-map {
+        height: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mini-map-container {
+        max-width: 100%;
+    }
+
+    .mini-map {
+        height: 150px;
+    }
+}
+
+/* =====================================================
    Cards Grid
    ===================================================== */
 .cards-grid {

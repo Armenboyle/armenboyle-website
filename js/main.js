@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initItineraryBuilder();
     initEricSidebar();
     initMap();
+    initMiniMaps();
 });
 
 /* =====================================================
@@ -643,6 +644,131 @@ function initMap() {
     // Enable scroll zoom when map is in focus
     map.on('focus', () => { map.scrollWheelZoom.enable(); });
     map.on('blur', () => { map.scrollWheelZoom.disable(); });
+}
+
+/* =====================================================
+   Section Mini Maps
+   ===================================================== */
+function initMiniMaps() {
+    // Location data for mini maps
+    const locations = [
+        // Hotels
+        { name: 'The Alexander Hotel', category: 'hotel', lat: 40.1775, lng: 44.5126 },
+        { name: 'Tufenkian Old Dilijan', category: 'hotel', lat: 40.7407, lng: 44.8603 },
+        { name: 'Tufenkian Lake Sevan', category: 'hotel', lat: 40.3358, lng: 45.2453 },
+
+        // Restaurants
+        { name: 'Sherep', category: 'restaurant', lat: 40.1792, lng: 44.5125 },
+        { name: 'MOV Restaurant', category: 'restaurant', lat: 40.1847, lng: 44.5133 },
+        { name: 'Lavash', category: 'restaurant', lat: 40.1856, lng: 44.5103 },
+        { name: 'Dalan', category: 'restaurant', lat: 40.1839, lng: 44.5136 },
+        { name: 'In Vino', category: 'restaurant', lat: 40.1819, lng: 44.5092 },
+        { name: 'Tsaghkunk', category: 'restaurant', lat: 40.2989, lng: 44.3619 },
+        { name: 'Yasaman', category: 'restaurant', lat: 40.5579, lng: 45.0088 },
+
+        // Wineries
+        { name: 'Old Bridge Winery', category: 'winery', lat: 39.7189, lng: 45.1806 },
+        { name: 'Zorah Wines', category: 'winery', lat: 39.7556, lng: 45.3017 },
+        { name: 'Armenia Wine', category: 'winery', lat: 40.0483, lng: 44.2833 },
+        { name: 'Ararat Brandy', category: 'winery', lat: 40.1678, lng: 44.4942 },
+
+        // Cultural Sites
+        { name: 'Khor Virap', category: 'cultural', lat: 39.8783, lng: 44.5761 },
+        { name: 'Noravank', category: 'cultural', lat: 39.6847, lng: 45.2331 },
+        { name: 'Geghard', category: 'cultural', lat: 40.1403, lng: 44.8178 },
+        { name: 'Temple of Garni', category: 'cultural', lat: 40.1128, lng: 44.7300 },
+        { name: 'Sevanavank', category: 'cultural', lat: 40.5579, lng: 45.0088 },
+        { name: 'Tatev', category: 'cultural', lat: 39.3797, lng: 46.2497 },
+        { name: 'Ararat Brandy Factory', category: 'cultural', lat: 40.1678, lng: 44.4942 },
+
+        // Museums & Markets
+        { name: 'Parajanov Museum', category: 'museum', lat: 40.1856, lng: 44.5028 },
+        { name: 'Cafesjian Center', category: 'museum', lat: 40.1907, lng: 44.5153 },
+        { name: 'Matenadaran', category: 'museum', lat: 40.1919, lng: 44.5211 },
+        { name: 'Chatinyan Studio', category: 'museum', lat: 40.1850, lng: 44.5150 },
+        { name: 'Aguletsi House-Museum', category: 'museum', lat: 40.1983, lng: 44.5089 },
+        { name: 'Vernissage Market', category: 'museum', lat: 40.1778, lng: 44.5117 },
+        { name: 'GUM Market', category: 'museum', lat: 40.1761, lng: 44.5042 }
+    ];
+
+    // Map configurations for each section
+    const miniMapConfigs = [
+        { id: 'hotels-mini-map', category: 'hotel', color: '#4A90A4' },
+        { id: 'restaurants-mini-map', category: 'restaurant', color: '#D4A574' },
+        { id: 'wineries-mini-map', category: 'winery', color: '#8B4553' },
+        { id: 'cultural-mini-map', category: 'cultural', color: '#9B8AA5' },
+        { id: 'museums-mini-map', category: 'museum', color: '#7A9B76' }
+    ];
+
+    // Create mini marker icon
+    const createMiniIcon = (color) => {
+        return L.divIcon({
+            className: 'mini-marker',
+            html: `<div style="
+                background: ${color};
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 2px solid rgba(255,255,255,0.9);
+                box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+            "></div>`,
+            iconSize: [10, 10],
+            iconAnchor: [5, 5],
+            popupAnchor: [0, -8]
+        });
+    };
+
+    // Initialize each mini map
+    miniMapConfigs.forEach(config => {
+        const container = document.getElementById(config.id);
+        if (!container) return;
+
+        // Filter locations for this category
+        const categoryLocations = locations.filter(loc => loc.category === config.category);
+        if (categoryLocations.length === 0) return;
+
+        // Calculate bounds
+        const lats = categoryLocations.map(loc => loc.lat);
+        const lngs = categoryLocations.map(loc => loc.lng);
+        const centerLat = (Math.min(...lats) + Math.max(...lats)) / 2;
+        const centerLng = (Math.min(...lngs) + Math.max(...lngs)) / 2;
+
+        // Create map
+        const map = L.map(config.id, {
+            center: [centerLat, centerLng],
+            zoom: 7,
+            scrollWheelZoom: false,
+            zoomControl: false,
+            dragging: false,
+            doubleClickZoom: false,
+            touchZoom: false,
+            attributionControl: true
+        });
+
+        // Add subtle map tiles
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '© OSM',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+
+        // Add markers
+        const icon = createMiniIcon(config.color);
+        categoryLocations.forEach(location => {
+            const marker = L.marker([location.lat, location.lng], { icon: icon }).addTo(map);
+            marker.bindPopup(`<strong>${location.name}</strong>`, { closeButton: false });
+            marker.on('mouseover', function() { this.openPopup(); });
+            marker.on('mouseout', function() { this.closePopup(); });
+        });
+
+        // Fit bounds with padding
+        if (categoryLocations.length > 1) {
+            const bounds = L.latLngBounds(categoryLocations.map(loc => [loc.lat, loc.lng]));
+            map.fitBounds(bounds, { padding: [20, 20] });
+        } else {
+            map.setView([categoryLocations[0].lat, categoryLocations[0].lng], 10);
+        }
+    });
 }
 
 /* =====================================================
