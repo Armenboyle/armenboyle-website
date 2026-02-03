@@ -511,6 +511,14 @@ function initMap() {
             lat: 40.0483,
             lng: 44.2833
         },
+        {
+            name: 'Van Ardi Winery',
+            category: 'winery',
+            type: 'Wineries',
+            description: 'Boutique family winery with tours and tastings',
+            lat: 40.2650,
+            lng: 44.2167
+        },
         // Cultural Sites
         {
             name: 'Khor Virap',
@@ -670,6 +678,7 @@ function initMiniMaps() {
         { name: 'Old Bridge Winery', category: 'winery', lat: 39.7189, lng: 45.1806 },
         { name: 'Zorah Wines', category: 'winery', lat: 39.7556, lng: 45.3017 },
         { name: 'Armenia Wine', category: 'winery', lat: 40.0483, lng: 44.2833 },
+        { name: 'Van Ardi Winery', category: 'winery', lat: 40.2650, lng: 44.2167 },
         { name: 'Ararat Brandy', category: 'winery', lat: 40.1678, lng: 44.4942 },
 
         // Cultural Sites
