@@ -424,6 +424,15 @@ a:hover {
     color: var(--color-gold);
 }
 
+.nav-links a.nav-special {
+    color: var(--color-gold);
+    font-style: italic;
+}
+
+.nav-links a.nav-special:hover {
+    color: var(--color-gold-light);
+}
+
 /* Itinerary Builder Button */
 .itinerary-btn {
     display: inline-block;
