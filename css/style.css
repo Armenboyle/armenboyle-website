@@ -2738,6 +2738,190 @@ a.card-image:hover img {
 }
 
 /* =====================================================
+   Guest Curator Section
+   ===================================================== */
+.guest-curator-section {
+    background: linear-gradient(180deg, #f8f5f0 0%, #f0ebe3 100%);
+    color: var(--color-dark);
+}
+
+.curator-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.guest-curator-section .section-label {
+    color: #9b7b6a;
+    font-size: 0.7rem;
+}
+
+.guest-curator-section h2 {
+    color: var(--color-dark);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.curator-intro {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl);
+    text-align: center;
+}
+
+.curator-bio h3 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.curator-title {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #9b7b6a;
+    margin-bottom: var(--spacing-md);
+}
+
+.curator-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
+}
+
+.curator-signature {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    margin-top: var(--spacing-sm);
+}
+
+.curator-category {
+    margin-bottom: var(--spacing-xl);
+}
+
+.curator-category-title {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #9b7b6a;
+    border-bottom: 1px solid rgba(155, 123, 106, 0.3);
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.curator-category-intro {
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.curator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.curator-grid-small {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.curator-card {
+    background: rgba(255, 255, 255, 0.7);
+    padding: var(--spacing-md);
+    border-left: 3px solid #9b7b6a;
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.curator-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.curator-card h4 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.curator-card h4 a {
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.curator-card h4 a:hover {
+    color: #9b7b6a;
+}
+
+.curator-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-gray-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.curator-card em {
+    font-style: italic;
+    color: #7a6a5a;
+}
+
+.curator-location {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #9b7b6a;
+    margin-top: auto;
+}
+
+.curator-card-featured {
+    background: var(--color-dark);
+    border-left-color: var(--color-gold);
+    grid-column: span 2;
+}
+
+.curator-card-featured h4,
+.curator-card-featured h4 a {
+    color: var(--color-white);
+}
+
+.curator-card-featured h4 a:hover {
+    color: var(--color-gold);
+}
+
+.curator-card-featured p {
+    color: var(--color-gray-light);
+}
+
+.curator-card-featured em {
+    color: var(--color-gold-light);
+}
+
+.curator-card-featured .curator-location {
+    color: var(--color-gold);
+}
+
+@media (max-width: 768px) {
+    .curator-card-featured {
+        grid-column: span 1;
+    }
+
+    .curator-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================================
    Legends & Facts Section
    ===================================================== */
 .legends-grid {
