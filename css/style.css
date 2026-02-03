@@ -407,6 +407,8 @@ a:hover {
     align-items: center;
     gap: var(--spacing-md);
     list-style: none;
+    margin-left: auto;
+    padding-left: var(--spacing-xl);
 }
 
 .nav-links a {
