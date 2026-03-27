@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initEricSidebar();
     initMap();
     initMiniMaps();
+    initCarousel();
 });
 
 /* =====================================================
@@ -792,3 +793,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+/* =====================================================
+   Photo Carousel
+   ===================================================== */
+function initCarousel() {
+    document.querySelectorAll('.intro-carousel').forEach(function(carousel) {
+        var track = carousel.querySelector('.carousel-track');
+        var leftBtn = carousel.querySelector('.carousel-arrow-left');
+        var rightBtn = carousel.querySelector('.carousel-arrow-right');
+        if (!track) return;
+
+        var scrollAmount = 300;
+
+        rightBtn.addEventListener('click', function() {
+            track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        leftBtn.addEventListener('click', function() {
+            track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+    });
+}
