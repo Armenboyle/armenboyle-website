@@ -1784,11 +1784,11 @@ a.card-image:hover img {
 }
 
 .about-image-small img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    width: 220px;
+    height: 280px;
+    border-radius: 8px;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 20%;
     border: 2px solid rgba(201, 162, 39, 0.3);
 }
 
@@ -1898,8 +1898,8 @@ a.card-image:hover img {
     }
 
     .about-image-small img {
-        width: 100px;
-        height: 100px;
+        width: 180px;
+        height: 230px;
     }
 }
 
