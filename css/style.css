@@ -557,7 +557,7 @@ a:hover {
 
 .hero-scroll {
     position: absolute;
-    bottom: 7rem;
+    bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -625,22 +625,16 @@ a:hover {
    Hero Facts Strip
    ===================================================== */
 .hero-facts {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: var(--color-dark);
     border-top: 1px solid rgba(201, 162, 39, 0.4);
-    padding: 1.75rem 0;
+    border-bottom: 1px solid rgba(201, 162, 39, 0.4);
+    padding: 2.5rem 0;
 }
 
 .hero-facts-track {
     display: flex;
     justify-content: center;
-    gap: 3.5rem;
+    gap: 4rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -652,22 +646,22 @@ a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0.35rem;
+    gap: 0.4rem;
 }
 
 .hero-fact-number {
     font-family: var(--font-display);
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: var(--color-gold);
     font-weight: 600;
     letter-spacing: 0.02em;
 }
 
 .hero-fact-text {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 @media (max-width: 768px) {
