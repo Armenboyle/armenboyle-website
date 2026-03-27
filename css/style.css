@@ -622,6 +622,59 @@ a:hover {
 }
 
 /* =====================================================
+   Hero Facts Strip
+   ===================================================== */
+.hero-facts {
+    background: var(--color-dark);
+    border-top: 1px solid rgba(201, 162, 39, 0.3);
+    border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+    padding: 1.5rem 0;
+    overflow: hidden;
+}
+
+.hero-facts-track {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+}
+
+.hero-fact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.25rem;
+}
+
+.hero-fact-number {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.hero-fact-text {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+    .hero-facts-track {
+        gap: 1.5rem;
+    }
+    .hero-fact-number {
+        font-size: 1.1rem;
+    }
+}
+
+/* =====================================================
    Introduction Section
    ===================================================== */
 .intro {
